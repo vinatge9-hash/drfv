@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Bean Café - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.75); -webkit-backdrop-filter: saturate(180%) blur(10px); backdrop-filter: saturate(180%) blur(10px); border:1px solid rgba(255,255,255,0.65); }
+  </style>
+</head>
+<body class="bg-background text-text min-h-screen">
+  <header class="sticky top-0 z-50 glass w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2"><span class="font-bold">Bright Bean Café</span></a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="index.html" class="text-sm">Home</a>
+        <a href="menu.html" class="text-sm">Menu</a>
+        <a href="contact.html" class="text-sm font-semibold">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section data-animate aria-label="Contact header" class="mb-4">
+      <h1 class="text-3xl font-bold">Contact Us</h1>
+      <p class="text-sm text-secondary mt-2">We’d love to hear from you. Send a message or sign up for our newsletter.</p>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6" aria-label="Contact form">
+      <form class="rounded-lg border bg-white p-6" action="#" method="post" novalidate>
+        <div class="mb-3">
+          <label class="block text-sm font-medium mb-1" for="name">Name</label>
+          <input id="name" name="name" type="text" required class="w-full px-3 py-2 border rounded" />
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium mb-1" for="email">Email</label>
+          <input id="email" name="email" type="email" required class="w-full px-3 py-2 border rounded" />
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium mb-1" for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border rounded"></textarea>
+        </div>
+        <button type="submit" class="px-4 py-2 rounded bg-primary text-white hover:bg-amber-700 transition-colors duration-300">Send Message</button>
+      </form>
+      <aside class="rounded-lg border bg-white p-6">
+        <h4 class="font-semibold mb-2">Newsletter</h4>
+        <p class="text-sm text-secondary mb-2">Get 10% off your first order when you sign up.</p>
+        <div class="flex items-center gap-2">
+          <input type="email" placeholder="Email address" class="flex-1 border rounded px-3 py-2" />
+          <button class="px-3 py-2 rounded bg-primary text-white">Sign Up</button>
+        </div>
+        <div class="mt-3 text-xs text-secondary">We respect your privacy. Unsubscribe anytime.</div>
+      </aside>
+    </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 text-sm text-text/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">© 2025 Bright Bean Café</div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
