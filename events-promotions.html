@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Bean Café - Events & Promotions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.75); -webkit-backdrop-filter: saturate(180%) blur(10px); backdrop-filter: saturate(180%) blur(10px); border:1px solid rgba(255,255,255,0.65); }
+    [data-animate]{ opacity:0; transform: translateY(8px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+    .is-visible{ opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-background text-text min-h-screen">
+  <header class="sticky top-0 z-50 glass w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2"><span class="font-bold">Bright Bean Café</span></a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="index.html" class="text-sm">Home</a>
+        <a href="menu.html" class="text-sm">Menu</a>
+        <a href="gallery.html" class="text-sm">Gallery</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section data-animate aria-label="Promotions header" class="mb-6">
+      <h1 class="text-3xl font-bold">Events & Promotions</h1>
+      <p class="text-sm text-secondary mt-2">Seasonal drinks, live music, and loyalty offers.</p>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-animate>
+      <article class="rounded-lg border bg-white p-4 hover:shadow-lg transition-all duration-300" aria-label="Autumn Night event">
+        <img src="https://pixabay.com/get/g36c31ce47685c7f93e0cd87427e34584cf5f64cbefeec0438a4bac15885a9b16822a1770857fd219c7cc5bb3a428ac98dab3e3125b604cfe40cf05e3d3e1e0ae_640.jpg" alt="Autumn Night" class="w-full h-28 object-cover rounded mb-2" />
+        <h4 class="font-semibold">Autumn Night Soiree</h4>
+        <p class="text-sm text-secondary">Live acoustic set, 10/25</p>
+      </article>
+      <article class="rounded-lg border bg-white p-4 hover:shadow-lg transition-all duration-300" aria-label="Loyalty promo">
+        <img src="https://images.pexels.com/photos/34141372/pexels-photo-34141372.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Loyalty Promo" class="w-full h-28 object-cover rounded mb-2" />
+        <h4 class="font-semibold">Loyalty Bonus</h4>
+        <p class="text-sm text-secondary">Earn 1 free drink after 10 visits</p>
+      </article>
+      <article class="rounded-lg border bg-white p-4 hover:shadow-lg transition-all duration-300" aria-label="Seasonal pastry promo">
+        <img src="https://images.pexels.com/photos/7243756/pexels-photo-7243756.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Seasonal Pastry" class="w-full h-28 object-cover rounded mb-2" />
+        <h4 class="font-semibold">Seasonal Pastry Pairing</h4>
+        <p class="text-sm text-secondary">Pair with a coffee for a special price</p>
+      </article>
+    </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 text-sm text-text/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">© 2025 Bright Bean Café</div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
