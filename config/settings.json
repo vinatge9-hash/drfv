@@ -1,0 +1,6 @@
+{
+  "siteName": "Bright Bean Café",
+  "region": "Local",
+  "theme": "light",
+  "cmsEndpoint": "/api/cms"
+}
