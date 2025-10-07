@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Bean Café - Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.75); -webkit-backdrop-filter: saturate(180%) blur(10px); backdrop-filter: saturate(180%) blur(10px); border:1px solid rgba(255,255,255,0.65); }
+    [data-animate]{ opacity:0; transform: translateY(8px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+    .is-visible{ opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-background text-text min-h-screen">
+  <header class="sticky top-0 z-50 glass w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2"><span class="font-bold">Bright Bean Café</span></a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="index.html" class="text-sm">Home</a>
+        <a href="menu.html" class="text-sm">Menu</a>
+        <a href="gallery.html" class="text-sm font-semibold">Gallery</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section data-animate aria-label="Gallery header" class="mb-6">
+      <h1 class="text-3xl font-bold">Gallery</h1>
+      <p class="text-sm text-secondary mt-2">Moments from the café—drinks, ambiance, and community joy.</p>
+    </section>
+    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" aria-label="Gallery grid">
+      <img src="https://pixabay.com/get/gc77cab14334c26679df82bd8734c66ea5f3f2b5ed76973f24641170f0e4b18b422b652639ec72a022c544d3b9baab4f3df744cae9cb9d9fc7c371c9a6f59e078_640.jpg" alt="Coffee art" class="w-full h-28 object-cover rounded" />
+      <img src="https://images.pexels.com/photos/3036908/pexels-photo-3036908.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Pastry display" class="w-full h-28 object-cover rounded" />
+      <img src="https://images.unsplash.com/photo-1600353565737-2427a1ba3d3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw5fHxjYWZlJTIwaW50ZXJpb3J8ZW58MHwwfHx8MTc1OTg1NzgyOHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Cafe interior" class="w-full h-28 object-cover rounded" />
+      <img src="https://images.unsplash.com/photo-1578674189378-15b9f813a8e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw3fHxsYXR0ZSUyMGFydCUyMGdyb3VwfGVufDB8MHx8fDE3NTk4NTc4Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Latte art group" class="w-full h-28 object-cover rounded" />
+      <img src="https://pixabay.com/get/g20394fe4907421678aa7a56b23d2c1c1ba42572cab8704b56e9e7119e5e819ea396ced3fc8c0edb90ca3ee1d086c25164773559d589d0f3aa11a9291c80264de_640.jpg" alt="Evening cafe" class="w-full h-28 object-cover rounded" />
+      <img src="https://pixabay.com/get/ge3af18e7ad8635d478bb6dfd5051e3ddfb08cfa5ecd415e2416448b6f059e3e213ba2dd0e210272e8b0173c38ec604eaee86936b212839cca89e6cea8960bc50_640.jpg" alt="Pastry assortment" class="w-full h-28 object-cover rounded" />
+    </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 text-sm text-text/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">© 2025 Bright Bean Café</div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
