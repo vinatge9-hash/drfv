@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Bean Café - Our Story</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.75); -webkit-backdrop-filter: saturate(180%) blur(10px); backdrop-filter: saturate(180%) blur(10px); border:1px solid rgba(255,255,255,0.65); }
+    [data-animate]{ opacity:0; transform: translateY(8px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+    .is-visible{ opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-background text-text min-h-screen">
+  <header class="sticky top-0 z-50 glass w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2"><span class="font-bold">Bright Bean Café</span></a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="index.html" class="text-sm">Home</a>
+        <a href="menu.html" class="text-sm">Menu</a>
+        <a href="locations.html" class="text-sm">Locations</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section data-animate aria-label="Our Story header" class="mb-6">
+      <h1 class="text-3xl font-bold">Our Story</h1>
+      <p class="text-sm text-secondary mt-2">From the first bean to your cup—our journey of coffee, community, and craft.</p>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6" data-animate>
+      <div class="rounded-lg p-6 bg-white shadow">
+        <h3 class="text-xl font-semibold mb-2">Sourcing with Care</h3>
+        <p class="text-sm text-secondary">We partner with farmers who cultivate high-quality beans and fair wages. Our coffees celebrate origin, flavor, and sustainable practices.</p>
+      </div>
+      <div class="rounded-lg p-6 bg-white shadow">
+        <h3 class="text-xl font-semibold mb-2">Community at Heart</h3>
+        <p class="text-sm text-secondary">A neighborhood café that supports local artists, hosts open mic nights, and funds community initiatives.</p>
+      </div>
+    </section>
+    <section class="mt-6" data-animate>
+      <div class="rounded-lg p-6 bg-white shadow flex items-center gap-4">
+        <img src="https://pixabay.com/get/g32d6ecf6e58abba8749eefa8d233e427c149293988d78d08ad62570e9ab9c91a544487806aef6ff6882e8f7e3bb956734d2df2b216f58b2e2673d8e520a0ab80_640.jpg" alt="Community" class="w-24 h-24 object-cover rounded" />
+        <div>
+          <h4 class="font-semibold">Coffee for the Community</h4>
+          <p class="text-sm text-secondary">A portion of every purchase supports local initiatives.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 text-sm text-text/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">© 2025 Bright Bean Café</div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
