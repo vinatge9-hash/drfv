@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Bean Café - Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }}}}
+  </script>
+  <style>
+    .glass { background: rgba(255,255,255,0.75); -webkit-backdrop-filter: saturate(180%) blur(10px); backdrop-filter: saturate(180%) blur(10px); border:1px solid rgba(255,255,255,0.65); }
+    [data-animate] { opacity: 0; transform: translateY(8px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+    .is-visible { opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-background text-text min-h-screen">
+  <header class="sticky top-0 z-50 glass w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="#1F2937" stroke-width="2"/></svg>
+        <span class="font-bold">Bright Bean Café</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="index.html" class="text-sm">Home</a>
+        <a href="menu.html" class="text-sm font-semibold">Menu</a>
+        <a href="locations.html" class="text-sm">Locations</a>
+        <a href="online-ordering.html" class="text-sm">Order</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section aria-label="Menu header" class="mb-6" data-animate>
+      <h1 class="text-3xl font-bold">Menu</h1>
+      <p class="text-sm text-secondary">Drinks, pastries, and food. CMS-ready for easy updates.</p>
+    </section>
+
+    <!-- Search Bar -->
+    <section aria-label="Search" class="mb-6" data-animate>
+      <div class="flex items-center gap-3 w-full">
+        <input type="text" placeholder="Search drinks, pastries, or food" class="flex-1 px-4 py-2 rounded border border-gray-300 focus:ring focus:ring-primary outline-none" />
+        <button class="px-4 py-2 rounded bg-primary text-white hover:bg-amber-700 transition-colors duration-300">Search</button>
+      </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section aria-label="Categories" class="mb-6" data-animate>
+      <div class="flex flex-wrap gap-2">
+        <button class="px-4 py-2 rounded-full bg-white border">Drinks</button>
+        <button class="px-4 py-2 rounded-full bg-white border">Pastries</button>
+        <button class="px-4 py-2 rounded-full bg-white border">Food</button>
+        <button class="px-4 py-2 rounded-full bg-white border">Seasonal</button>
+      </div>
+    </section>
+
+    <!-- Product Grid (CMS-driven) -->
+    <section aria-label="Menu items" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-animate>
+      <!-- Item 1 -->
+      <div class="border rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+        <img src="https://images.pexels.com/photos/4195604/pexels-photo-4195604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Espresso Beverage" class="w-full h-40 object-cover rounded mb-2" />
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="font-semibold">Espresso</h4>
+            <p class="text-sm text-secondary">Single-origin shot</p>
+          </div>
+          <span class="font-bold">$2.50</span>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="border rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+        <img src="https://images.pexels.com/photos/1510683/pexels-photo-1510683.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Croissant" class="w-full h-40 object-cover rounded mb-2" />
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="font-semibold">Butter Croissant</h4>
+            <p class="text-sm text-secondary">Flaky, buttery pastry</p>
+          </div>
+          <span class="font-bold">$3.75</span>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="border rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+        <img src="https://images.pexels.com/photos/27304313/pexels-photo-27304313.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Almond Croissant" class="w-full h-40 object-cover rounded mb-2" />
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="font-semibold">Almond Croissant</h4>
+            <p class="text-sm text-secondary">Toasted almond filling</p>
+          </div>
+          <span class="font-bold">$4.25</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-8 bg-white border-t border-gray-200 text-sm text-text/70">
+    <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">© 2025 Bright Bean Café</div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
