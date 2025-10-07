@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Bean Café - Home</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <style>
+    /* Glassmorphism helper for sticky header and cards */
+    .glass {
+      background: rgba(255, 255, 255, 0.75);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      backdrop-filter: saturate(180%) blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+    }
+    .glass-dark {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    [data-animate], .animate {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 600ms ease-out, transform 600ms ease-out;
+    }
+    [data-animate].is-visible, .animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-background text-text min-h-screen antialiased">
+  <!-- Header (Sticky Glassmorphic Nav) -->
+  <header class="sticky top-0 z-50 w-full glass backdrop-blur bg-white/60 border-b border-white/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="index.html" aria-label="Bright Bean Café home" class="flex items-center space-x-2">
+          <!-- Inline SVG Logo -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 7h16a2 2 0 012 2v6a6 6 0 01-6 6H8a6 6 0 01-6-6V9a2 2 0 012-2z" fill="#7A4F2B"/>
+            <path d="M9 3h6l1 3H8l1-3z" fill="#D97706"/>
+          </svg>
+          <span class="font-bold text-xl tracking-tight">Bright Bean Café</span>
+        </a>
+        <!-- Links (icons inline SVG) -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="index.html" class="flex items-center text-sm font-medium text-text hover:text-primary transition-colors duration-300" aria-label="Home">
+            <!-- home icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="mr-1"><path d="M3 11.5L12 4l9 7.5V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1v-8.5z" fill="#1F2937"/></svg>
+            Home
+          </a>
+          <a href="menu.html" class="flex items-center text-sm font-medium text-text hover:text-primary transition-colors duration-300" aria-label="Menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="mr-1"><path d="M3 6h18M3 12h18M3 18h18" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/></svg>
+            Menu
+          </a>
+          <a href="locations.html" class="flex items-center text-sm font-medium text-text hover:text-primary transition-colors duration-300" aria-label="Locations">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="mr-1"><path d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z" stroke="#1F2937" stroke-width="2"/><circle cx="12" cy="10" r="3" fill="#1F2937"/></svg>
+            Locations
+          </a>
+          <a href="online-ordering.html" class="flex items-center text-sm font-medium text-text hover:text-primary transition-colors duration-300" aria-label="Order Online">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="mr-1"><path d="M3 7h14l4 4-4 4H3V7z" stroke="#1F2937" stroke-width="2"/><circle cx="18" cy="9" r="1.5" fill="#1F2937"/><circle cx="18" cy="15" r="1.5" fill="#1F2937"/></svg>
+            Order
+          </a>
+          <a href="contact.html" class="flex items-center text-sm font-medium text-text hover:text-primary transition-colors duration-300" aria-label="Contact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="mr-1"><path d="M2 7l10 6 10-6" stroke="#1F2937" stroke-width="2"/><path d="M4 17l6-3 6 3" stroke="#1F2937" stroke-width="2"/></svg>
+            Contact
+          </a>
+        </div>
+        <!-- CTA for small screens -->
+        <a href="online-ordering.html" class="md:hidden inline-flex items-center px-3 py-2 rounded-md bg-primary text-white text-sm font-medium shadow hover:bg-amber-700 transition-colors duration-300" aria-label="Order Online Mobile">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative w-full">
+      <div class="h-[60vh] md:h-[70vh] bg-cover bg-center" style="background-image: url('https://pixabay.com/get/g72858992ff189c1574009514dc874988ad3ffaafd47ad247aa37e59e98972f814f8bba3e887033107787a64270eac72afbe72053f0ffcaf7014c5ff0e6cc9f01_640.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white">
+          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-lg">Welcome to Bright Bean Café</h1>
+          <p class="mt-2 text-sm md:text-lg">Artisan coffee, freshly baked pastries, and seasonal flavors crafted with care.</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="menu.html" class="inline-flex items-center px-5 py-3 rounded-full bg-white text-primary font-semibold hover:bg-gray-100 transition-colors duration-300" aria-label="View Menu">
+              View Menu
+              <span class="ml-2 inline-block w-3 h-3 -rotate-45 border-t-2 border-l-2 border-primary"></span>
+            </a>
+            <a href="locations.html" class="inline-flex items-center px-5 py-3 rounded-full bg-transparent border border-white text-white font-semibold hover:bg-white/20 transition-colors duration-300" aria-label="Find Locations">
+              Find Locations
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Drinks & Promo -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" aria-label="Signature drinks">
+      <div class="flex items-center justify-between flex-wrap gap-4" data-animate>
+        <h2 class="text-2xl md:text-3xl font-bold text-text">Signature Drinks</h2>
+        <a href="menu.html" class="text-sm font-medium text-primary hover:underline">Explore Menu</a>
+      </div>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Menu Card 1 -->
+        <article class="rounded-lg shadow elevation1 bg-white overflow-hidden transform hover:scale-105 transition-all duration-300" aria-label="Caramel Latte">
+          <img src="https://images.unsplash.com/photo-1545731939-9c302d5d27ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw5fHxhJTIwY2FyYW1lbCUyMGxhdHRlJTIwd2l0aCUyMGxhdHRlJTIwYXJ0fGVufDB8MHx8fDE3NTk4NTc4MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Caramel Latte" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Caramel Latte</h3>
+            <p class="text-sm text-secondary">Espresso, caramel, and steamed milk</p>
+            <div class="mt-2 flex items-center justify-between"><span class="font-bold">$4.75</span><button class="px-3 py-1 rounded bg-primary text-white text-sm hover:bg-amber-700 transition-colors duration-300">Add</button></div>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="rounded-lg shadow elevation1 bg-white overflow-hidden transform hover:scale-105 transition-all duration-300" aria-label="Vanilla Hot Chocolate">
+          <img src="https://pixabay.com/get/ga8fc98d9b1a8c85c2bfa75e4db38c6921b62bb8edd97c1d99e0f7020ef21892f8e0cdb1ec81859bf17f60021488229d76e9e4bdba42f1ed9ec0830bf43948277_640.jpg" alt="Vanilla Hot Chocolate" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Vanilla Hot Chocolate</h3>
+            <p class="text-sm text-secondary">Creamy cocoa with vanilla bean</p>
+            <div class="mt-2 flex items-center justify-between"><span class="font-bold">$4.25</span><button class="px-3 py-1 rounded bg-primary text-white text-sm hover:bg-amber-700 transition-colors duration-300">Add</button></div>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="rounded-lg shadow elevation1 bg-white overflow-hidden transform hover:scale-105 transition-all duration-300" aria-label="Blueberry Muffin Latte">
+          <img src="https://images.unsplash.com/photo-1589475258802-1415864e0dce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxibHVlYmVycnklMjBtdWZmaW4lMjBsYXR0ZXxlbnwwfDB8fHwxNzU5ODU3ODEzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Blueberry Muffin Latte" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Blueberry Muffin Latte</h3>
+            <p class="text-sm text-secondary">Espresso, blueberries, foam</p>
+            <div class="mt-2 flex items-center justify-between"><span class="font-bold">$4.95</span><button class="px-3 py-1 rounded bg-primary text-white text-sm hover:bg-amber-700 transition-colors duration-300">Add</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6" aria-label="Seasonal promo">
+      <div class="rounded-xl p-6 md:p-8 bg-gradient-to-br from-amber-100 to-yellow-50 border border-yellow-200 shadow-md glass" data-animate>
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h3 class="text-lg font-semibold text-text">Seasonal Promo: Autumn Harvest</h3>
+            <p class="text-sm text-secondary">Try our pumpkin-spice signature drinks and limited pastries.</p>
+          </div>
+          <a href="events-promotions.html" class="px-4 py-2 rounded bg-amber-600 text-white font-medium hover:bg-amber-700 transition-colors duration-300">View Promotions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white/90 border-t border-gray-200 mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-text/70">
+      <div>
+        <strong>Bright Bean Café</strong>
+        <p class="mt-1">© 2025 Bright Bean Café. All rights reserved.</p>
+      </div>
+      <div>
+        <strong>Follow</strong>
+        <p class="mt-1">Instagram • Facebook • X</p>
+      </div>
+      <div>
+        <strong>Newsletter</strong>
+        <p class="mt-1">Sign up for promotions and seasonal updates.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
