@@ -1,0 +1,12 @@
+{
+  "drinks": [
+    {"name": "Espresso", "price": 2.5, "description": "Single-origin shot"},
+    {"name": "Caramel Latte", "price": 4.75, "description": "Espresso, caramel, milk"}
+  ],
+  "pastries": [
+    {"name": "Butter Croissant", "price": 3.75, "description": "Flaky & buttery"}
+  ],
+  "foods": [
+    {"name": "Avocado Toast", "price": 6.5, "description": "Sourdough, lime, chili"}
+  ]
+}
